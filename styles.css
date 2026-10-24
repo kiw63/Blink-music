@@ -100,3 +100,24 @@ a:focus-visible,
   .topbar .searchbox { min-width: 0; }
   .track-buttons .mini { min-height: 36px; }
 }
+
+/* Search fallback: real external music-service searches, not fabricated tracks. */
+.external-search-panel{margin-top:16px;padding:18px;border:1px solid #45455c;border-radius:16px;background:#151521;box-shadow:4px 4px 0 #000}.external-search-panel h3{margin:0 0 12px;color:#f5f4ff}.external-search-actions{display:flex;flex-wrap:wrap;gap:10px}.external-search-actions a{text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+
+/* Playlist multi-select picker */
+.playlist-picker-panel{margin:24px 0;padding:clamp(16px,3vw,24px);border:1px solid var(--line,rgba(255,255,255,.12));border-radius:22px;background:linear-gradient(145deg,rgba(35,35,45,.92),rgba(18,18,24,.96));box-shadow:0 14px 34px rgba(0,0,0,.18)}
+.playlist-picker-panel>.field{display:flex;flex-direction:column;gap:8px;margin:14px 0}
+.playlist-picker-panel select{width:100%;min-height:46px;padding:12px 14px;border-radius:12px;color:inherit;background:#202027;border:1px solid rgba(255,255,255,.18)}
+.playlist-picker-panel .inline-search{margin:12px 0;display:flex;gap:10px}
+.playlist-picker-panel .inline-search input{min-width:0;flex:1}
+.playlist-picker-results{display:grid;gap:8px;margin-top:12px}
+.playlist-pick-row{display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.035);cursor:pointer;min-width:0}
+.playlist-pick-row:has(input:checked){border-color:#55ded7;background:rgba(85,222,215,.09)}
+.playlist-pick-row input{width:19px;height:19px;flex:0 0 auto;accent-color:#55ded7}
+.playlist-pick-row img{width:44px;height:44px;object-fit:cover;border-radius:9px;background:#30303a;flex:0 0 auto}
+.playlist-pick-meta{display:flex;flex:1;flex-direction:column;gap:4px;min-width:0}
+.playlist-pick-meta strong,.playlist-pick-meta small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.playlist-pick-meta small{color:var(--muted,#aaa);font-size:.82rem}
+.playlist-picker-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:16px}
+.playlist-picker-footer button:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:560px){.playlist-picker-panel .inline-search{flex-direction:column}.playlist-picker-panel .inline-search button,.playlist-picker-footer button{width:100%}.playlist-pick-row .tiny{display:none}}
